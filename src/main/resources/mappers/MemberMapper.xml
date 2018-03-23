@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dgit.mapper.MemberMapper">
+	
+	<insert id="create">
+		insert into tb_member (userid, userpw, username, email, phone)
+		values (#{userid},#{userpw},#{username},#{email},#{phone})
+	</insert>
+	<select id="read" resultType="MemberVO">
+		select * from tb_member where userid =#{userid}
+	</select>
+	
+</mapper>
