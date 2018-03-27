@@ -12,4 +12,14 @@
 		select * from tb_member where userid =#{userid}
 	</select>
 	
+	<insert id="fileUpload">
+		insert into tb_attach (userid, regdate, fullName)
+		values (#{userid},#{regdate},#{fullName})
+	</insert>
+	<delete id="fileDelete">
+		delete from tb_attach where fullName =#{fullName}
+	</delete>
+	<select id="fileList" resultType="FileVO">
+		select * from tb_attach where userid =#{userid} order by regdate desc
+	</select>
 </mapper>
