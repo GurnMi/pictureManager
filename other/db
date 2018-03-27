@@ -1,0 +1,17 @@
+create table tb_member(
+	userid varchar(50) not null,
+	userpw varchar(50) not null,
+	username varchar(50) not null,
+	email varchar(100),
+	phone varchar(50),
+	primary key(userid)
+	);
+
+drop table tbl_attach;
+	
+create table tb_attach(
+	fullName varchar(150) not null,
+	userid varchar(50) not null,
+	regdate timestamp default now(),
+	primary key(fullName)
+	);
