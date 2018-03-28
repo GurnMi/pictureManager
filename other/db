@@ -15,3 +15,16 @@ create table tb_attach(
 	regdate timestamp default now(),
 	primary key(fullName)
 	);
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
